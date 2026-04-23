@@ -4,8 +4,7 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y nodejs npm && rm -rf /var/lib/apt/lists/*
 
-# Add python symlink so spawn("python") works
-RUN ln -s /usr/bin/python3 /usr/local/bin/python 2>/dev/null || true
+RUN which python3 && ln -sf $(which python3) /usr/bin/python && which python
 
 COPY dist ./dist
 COPY package.json ./
