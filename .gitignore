@@ -1,0 +1,7 @@
+node_modules/
+.local/
+attached_assets/
+__pycache__/
+*.pyc
+.env
+service-account.json
