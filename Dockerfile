@@ -4,8 +4,7 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y nodejs npm && rm -rf /var/lib/apt/lists/*
 
-# Create python wrapper so spawn("python") works
-RUN echo '#!/bin/sh\nexec python3 "$@"' > /usr/local/bin/python && chmod +x /usr/local/bin/python
+RUN printf '#!/bin/sh\nexec python3 "$@"\n' > /usr/local/bin/python && chmod +x /usr/local/bin/python
 
 COPY dist ./dist
 COPY package.json ./
