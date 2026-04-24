@@ -22,12 +22,10 @@ export function Sidebar() {
   return (
     <aside className="fixed inset-y-0 left-0 z-50 w-72 bg-card/50 backdrop-blur-2xl border-r border-border flex flex-col">
       <div className="p-6 flex items-center gap-3">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/20">
-          <Database className="w-5 h-5 text-white" />
-        </div>
+        <img src="/favicon.svg" style={{width:"40px",height:"40px"}} alt="Keystone" />
         <div>
-          <h1 className="text-xl font-bold font-display text-foreground leading-none">Nexus</h1>
-          <p className="text-xs text-muted-foreground mt-1">Data Connector</p>
+          <h1 className="text-xl font-bold font-display text-foreground leading-none">Keystone</h1>
+          <p className="text-xs text-muted-foreground mt-1">Marketing Connector</p>
         </div>
       </div>
 
