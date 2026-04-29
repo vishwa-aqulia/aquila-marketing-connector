@@ -25,7 +25,7 @@ class GoogleBusinessConnector(BaseConnector):
         )
         self._mybiz = build("mybusinessbusinessinformation", "v1", credentials=creds)
         self._perf = build("businessprofileperformance", "v1", credentials=creds)
-        self._reviews_service = build("mybusinessreviews", "v1", credentials=creds) if True else None
+        self._reviews_service = None
         self.logger.info("Google Business Profile authentication successful")
         return True
 
